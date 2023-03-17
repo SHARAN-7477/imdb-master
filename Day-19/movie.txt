@@ -1,0 +1,72 @@
+//------ Table created the one simple IMDB databse,using in mysql query---
+
+//------ Table created:
+
+CREATE TABLE MOVIES (
+  Id INTEGER PRIMARY KEY,
+  Actor_Name TEXT NOT NULL,
+  Title TEXT NOT NULL,
+  Review TEXT NOT NULL,
+  Skills TEXT NOT NULL,
+  Role TEXT NOT NULL,
+);
+
+// ----- Insert inot the data in to table ----
+
+INSERT INTO MOVIES VALUES
+
+       (1,'vijay','varisu','family entertinment','fentabulous','Hero');
+
+INSERT INTO MOVIES VALUES  
+
+        (2,'ajith','mangatha','action','Good','hero and rowdy');
+
+INSERT INTO MOVIES VALUES 
+
+        (3,'surya','ayan','nice movie','Very Good','Hero');
+
+//----- get the list of data using the sql query ------
+
+SELECT * FROM MOVIES ;
+
+OUTPUT:
+
+
+Id	Actor_Name	  Title	            Review	            Skills	        Role
+
+1	vijay 	        varisu		       family entertinment  fentabulous       Hero
+2 ajith         mangatha            action              Good              hero and rowdy'
+3	surya           ayan              nice movie          Very Good         Hero
+
+
+2. REVIEW: 
+
+SELECT Review FROM MOVIES ;
+
+OUTPUT:
+
+family entertinment
+action
+nice movie.
+
+
+3. SKILLS:
+
+SELECT Skills FROM MOVIES ;
+
+OUTPUT:
+
+fentabulous
+Good 
+Very good
+
+
+4. ROLE:
+
+SELECT Role FROM MOVIES ;
+
+OUTPUT:
+
+Hero
+Hero and rowdy
+hero
