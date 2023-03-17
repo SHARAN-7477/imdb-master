@@ -6,6 +6,8 @@ CREATE TABLE MOVIES (
   Id INTEGER PRIMARY KEY,
   Actor_Name TEXT NOT NULL,
   Title TEXT NOT NULL,
+  Media TEXT NOT NULL,
+  Genre TEXT NOT NULL,
   Review TEXT NOT NULL,
   Skills TEXT NOT NULL,
   Role TEXT NOT NULL,
@@ -15,15 +17,15 @@ CREATE TABLE MOVIES (
 
 INSERT INTO MOVIES VALUES
 
-       (1,'vijay','varisu','family entertinment','fentabulous','Hero');
+       (1,'Karthi','Theeran Adhigaram Ondru','action crime thriller','invigorating action flick!','8.2/10','police officer',);
 
 INSERT INTO MOVIES VALUES  
 
-        (2,'ajith','mangatha','action','Good','hero and rowdy');
+        (2,'Ajith','mankatha','action crime thriller','fantastic','7.7/10','Hero and rowdy',);
 
 INSERT INTO MOVIES VALUES 
 
-        (3,'surya','ayan','nice movie','Very Good','Hero');
+        (3,'surya','ayan','Action','blockbuster','7.6/10','smuggler');
 
 //----- get the list of data using the sql query ------
 
@@ -32,41 +34,50 @@ SELECT * FROM MOVIES ;
 OUTPUT:
 
 
-Id	Actor_Name	  Title	            Review	            Skills	        Role
+Id	  Actor_Name	        Title	                  Genre                    Review	                Ratings	           Role
 
-1	vijay 	        varisu		       family entertinment  fentabulous       Hero
-2 ajith         mangatha            action              Good              hero and rowdy'
-3	surya           ayan              nice movie          Very Good         Hero
+1 	    Karthi 	     Theeran Adhigaram    Action crime thriller    invigorating action flick!     8.2/10       police officer
+                          Ondru		        
+2       Ajith            Mankatha         Action crime thriller            fantastic              7.7/10       hero and rowdy'
+3	      Surya             ayan                   Action                    blockbuster            7.6/10         smuggler 
 
 
-2. REVIEW: 
+2. GENRE: 
+
+SELECT Genre FROM MOVIES ;
+
+OUTPUT:
+
+Action crime thriller
+Action crime thriller
+Action
+
+3. REVIEW: 
 
 SELECT Review FROM MOVIES ;
 
 OUTPUT:
+invigorating action flick!
+fantastic
+blockbuster
 
-family entertinment
-action
-nice movie.
+4. Ratings:
 
-
-3. SKILLS:
-
-SELECT Skills FROM MOVIES ;
+SELECT Ratings FROM MOVIES ;
 
 OUTPUT:
 
-fentabulous
-Good 
-Very good
+8.2/10
+7.7/10
+7.6/10
 
 
-4. ROLE:
+5. ROLE:
 
 SELECT Role FROM MOVIES ;
 
 OUTPUT:
 
-Hero
+police officer 
 Hero and rowdy
-hero
+smuggler
